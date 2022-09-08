@@ -1,31 +1,66 @@
-# 0x18. C - Stacks, Queues - LIFO, FIFO
+# MONTY
+![alt text](https://upload.wikimedia.org/wikipedia/en/c/cb/Flyingcircus_2.jpg)
 
 ## Description
 
-This ALX - Holberton Software Engineering School project is a custom ByteCode interpreter, coded in C.
-Compilation:
-```gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
-Usage:
-```./monty byte_file.m```
+Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
-The program reads from the file "byte_file.m" that contains one instruction per line.
-It then calls the right function to modify a stack according to the instruction.
-It prints custom error messages if the instruction is wrong.
+***
 
-## Table of contents
+## Installation
 
-File | Description
----- | -----------
-[main.c](./main.c) | entry point of the program
-[monty.h](./monty.h) | main header file
-[lists.h](./lists.h) | header file for the lists functions
-[get_func.c](./get_func.c) | function that picks the right function for the instruction
-[handler_funcs1.c](./handler_funcs1.c) | handler functions for the instructions
-[handler_funcs2.c](./handler_funcs2.c) | handler functions for the instructions
-[handler_funcs3.c](./handler_funcs3.c) | handler functions for the instructions
-[list_funcs1.c](./list_funcs1.c) | doubly linked list functions
-[list_funcs2.c](./list_funcs2.c) | doubly linked list functions
-[strtow.c](./strtow.c) | string tokenizing functions
-[free.c](./free.c) | memory handling functions
-[char.c](./char.c) | handler functions for ascii instructions
-[bf](./bf) | Advanced tasks: Brainf*ck programs
+1. Clone the repository:
+```console
+https://github.com/Monemax94/monty.git
+```
+
+## Usage
+1. Enter at directory
+```console
+cd monty
+```
+
+2. Compile:
+```console
+gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
+```
+
+3. Execute:
+```console
+./monty file.m
+//The file contains the bytcode instructions for example
+cat -e 000.m
+push 0$
+push 1$
+push 2$
+  push 3$
+                   pall    $
+push 4$
+    push 5    $
+      push    6        $
+pall$
+```
+
+## Functions
+
+The functions used are:
+
+|Name | Description | Return| File
+|:--: | :-- | :--| :--|
+|_f_add | adds the top two elements of the stack | No Return | add.c|
+| addnode | add node to the head stack | No Return | addnode.c|
+| f_div | divides the top two elements of the stack. | No Return | div.c|
+| execute | executes the opcode | No Return | execute.c|
+| free_stack | frees a doubly linked list | No Return | free_stack.c|
+| main | monty code interpreter | 0 on success | main.c| 
+
+### Examples
+
+```console
+$monemax> ls
+basics.c    general.c  main.h  memory.c   shell.c
+builders.c  helper.c   hsh          README.md  test
+```
+
+### Authors
+[Monday Odoh ](https://github.com/Monemax94) and [ABDULKADIR BADAMASI](https://github.com/Akmahuta)
